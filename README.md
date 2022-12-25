@@ -36,7 +36,8 @@ mv $HOME/.okp4d/priv_validator_state.json.backup $HOME/.okp4d/data/priv_validato
 sudo systemctl restart okp4d
 sudo journalctl -u okp4d -f --no-hostname -o cat
   ```
-  ![image](https://user-images.githubusercontent.com/98663407/209471103-3cd1dba0-27c0-40f8-8e8e-2154e41cf9e6.png)
+![2022-12-25_17-07-19](https://user-images.githubusercontent.com/98663407/209471147-bccb6c9c-b060-44aa-b5ec-c608fd907510.png)
+
 
 # guide state sync okp4  
 
