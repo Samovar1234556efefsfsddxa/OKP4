@@ -1,7 +1,7 @@
 # Open Knowledge Protocol (OKP4)
 ![2022-12-25_15-55-50](https://user-images.githubusercontent.com/98663407/209468772-5fda2ec1-4446-49b4-a605-0cb55c0897e8.png)
 
-RPC http://65.108.129.29:27657
+RPC http://65.109.69.240:28657/
 gRPC http://65.108.129.29:9190/
 Live Peers 2ca4e1bed94cfe9fad160e704ccbabf95f438dee@65.108.129.29:27657
 API Endpoint http://65.108.129.29::1417
@@ -16,7 +16,7 @@ sudo systemctl stop okp4d
 cp $HOME/.okp4d/data/priv_validator_state.json $HOME/.okp4d/priv_validator_state.json.backup
 okp4d tendermint unsafe-reset-all --home $HOME/.okp4d --keep-addr-book
 
-SNAP_RPC="http://65.108.129.29:27657"
+SNAP_RPC="http://65.109.69.240:28657"
 
 LATEST_HEIGHT=$(curl -s $SNAP_RPC/block | jq -r .result.block.header.height); \
 BLOCK_HEIGHT=$((LATEST_HEIGHT - 1000)); \
@@ -82,7 +82,7 @@ sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" ~/.okp4d
 Enter the commands one by one
 
   ```
-SNAP_RPC=65.108.129.29:27657
+SNAP_RPC=65.109.69.240:28657
 LATEST_HEIGHT=$(curl -s $SNAP_RPC/block | jq -r .result.block.header.height); \
 BLOCK_HEIGHT=$((LATEST_HEIGHT - 1000)); {\
 TRUST_HASH=$(curl -s "$SNAP_RPC/block?height=$BLOCK_HEIGHT" | jq -r .result.block_id.hash)
