@@ -1,3 +1,5 @@
+
+
 sudo systemctl stop okp4d
 
 cp $HOME/.okp4d/data/priv_validator_state.json $HOME/.okp4d/priv_validator_state.json.backup
